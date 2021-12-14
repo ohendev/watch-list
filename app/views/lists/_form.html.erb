@@ -1,0 +1,7 @@
+<%= simple_form_for(list, html: { class: "form-body"}) do |form| %>
+    <%= form.label :name, class: 'w-100' %>
+    <div class="form-control-container">
+      <%= form.text_field :name, class: 'form-control w-70 radius-12' %>
+      <%= form.submit class: 'btn btn-gradient w-20'%>
+    </div>
+<% end %>
