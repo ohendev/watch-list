@@ -10,10 +10,13 @@
   <div class="cards">
     <% @list.movies.each do |movie| %>
       <div class="card-product">
+        <% bookmark = movie.bookmarks.find { |bookmark| bookmark.movie_id == movie.id && bookmark.list_id == @list.id } %>
+        <%= link_to 'delete', bookmark_path(bookmark.id), method: :delete %>
         <img src="<%= movie.poster_url %>" />
         <div class="card-product-infos">
           <h2><%= movie.title %></h2>
           <p><%= movie.overview %></p>
+          <p class="comment"><%= bookmark.comment %></p>
         </div>
       </div>
     <% end %>
