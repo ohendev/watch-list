@@ -1,0 +1,6 @@
+<%= simple_form_for([list, bookmark], html: { class: "form-body"}) do |form| %>
+  <%= form.label :comment %>
+  <%= form.text_field :comment, class: 'form-control radius-12 mb-2' %>
+  <%= form.association :movie, collection: Movie.all, class: 'form-control radius-12' %>
+  <%= form.submit class: 'btn btn-gradient' %>
+<% end %>

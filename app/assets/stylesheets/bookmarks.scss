@@ -1,0 +1,19 @@
+// Place all the styles related to the bookmarks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.radius-12 {
+  border-radius: 12px !important;
+}
+
+.form-body {
+  margin-top: 24px;
+  padding: 36px;
+}
+
+.form-control-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

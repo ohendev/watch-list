@@ -10,7 +10,7 @@
   <div class="cards">
     <% @lists.each do |list| %>
       <div class="list-item">
-        <%= link_to list.name, list_path(list.id) %>
+        <p><%= link_to list.name, list_path(list.id) %> (<%= list.bookmarks.size %>)</p>
       </div>
     <% end %>
   </div>

@@ -2,21 +2,13 @@
   <div class="container">
     <%= image_tag "logo.png", height: "100" %>
     <h1 id="show-h1" class="mb-5"><%= @list.name %></h1>
-    <%= link_to "Add a movie", new_list_bookmark_path(@list.id), class: "btn btn-gradient" %>
     <%= link_to "Back to Home", root_path, class: "btn btn-gradient" %>
   </div>
 </div>
-<div class="container mt-5">
-  <div class="cards">
-    <% @list.movies.each do |movie| %>
-      <div class="card-product">
-        <img src="<%= movie.poster_url %>" />
-        <div class="card-product-infos">
-          <h2><%= movie.title %></h2>
-          <p><%= movie.overview %></p>
-        </div>
-      </div>
-    <% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 radius-12 bg-white shadow mt-5">
+      <%= render 'add_bookmark', list: @list, bookmark: @bookmark %>
+    </div>
   </div>
 </div>
-
